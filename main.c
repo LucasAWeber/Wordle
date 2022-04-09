@@ -20,6 +20,10 @@ int main()
     while (guesses > 0)
     {
         scanf("%s", wordGuess);
+        for (int i = 0; i < STRINGLEN; i++)
+        {
+            wordGuess[i] = tolower(wordGuess[i]);
+        }
         if (validWordCheck(validWordsArray, wordGuess))
         {
             if (checkWord(wordGuess, word, guessArray) == 1)
